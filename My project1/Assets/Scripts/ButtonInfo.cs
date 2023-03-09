@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonInfo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int ItemID;
+    public Text PriceTxt;
+    public Text QuantityTxt;
+    public GameObject ShopManager;
+
 
     // Update is called once per frame
     void Update()
