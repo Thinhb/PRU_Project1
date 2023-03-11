@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ShopManagerScript : MonoBehaviour
@@ -33,9 +34,16 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[3, 2] = 0;
         shopItems[3, 3] = 0;
         shopItems[3, 4] = 0;
-        
-        
+    }
+    public void Buy()
+    {
+        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+        if(coins>= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        {
+           coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+            shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
+            ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();   
 
-        
+        }
     }
 }
