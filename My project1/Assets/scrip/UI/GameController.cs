@@ -9,7 +9,6 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject[] gameobjectlist;
     public float spawnTime;
     [SerializeField] float m_spawnTime;
     int m_score;
