@@ -25,8 +25,9 @@ using Thread = System.Threading.Thread;
 /// </summary>
 [HelpURL("http://arongranberg.com/astar/docs/class_astar_path.php")]
 public class AstarPath : VersionedMonoBehaviour {
-	/// <summary>The version number for the A* %Pathfinding Project</summary>
-	public static readonly System.Version Version = new System.Version(4, 2, 17);
+	
+    /// <summary>The version number for the A* %Pathfinding Project</summary>
+    public static readonly System.Version Version = new System.Version(4, 2, 17);
 
 	/// <summary>Information about where the package was downloaded</summary>
 	public enum AstarDistribution { WebsiteDownload, AssetStore, PackageManager };
@@ -52,9 +53,8 @@ public class AstarPath : VersionedMonoBehaviour {
 			return data.graphTypes;
 		}
 	}
-
-	/// <summary>Holds all graph data</summary>
-	[UnityEngine.Serialization.FormerlySerializedAs("astarData")]
+    /// <summary>Holds all graph data</summary>
+    [UnityEngine.Serialization.FormerlySerializedAs("astarData")]
 	public AstarData data;
 
 	/// <summary>
@@ -832,25 +832,26 @@ public class AstarPath : VersionedMonoBehaviour {
 			if (logPathResults == PathLog.InGame) {
 				inGameDebugPath = debug;
 			} else if (path.error) {
-				Debug.LogWarning(debug);
+				//Debug.LogWarning(debug);
 			} else {
-				Debug.Log(debug);
+				//Debug.Log(debug);
 			}
 		}
 	}
 
-	/// <summary>
-	/// Checks if any work items need to be executed
-	/// then runs pathfinding for a while (if not using multithreading because
-	/// then the calculation happens in other threads)
-	/// and then returns any calculated paths to the
-	/// scripts that requested them.
-	///
-	/// See: PerformBlockingActions
-	/// See: PathProcessor.TickNonMultithreaded
-	/// See: PathReturnQueue.ReturnPaths
-	/// </summary>
-	private void Update () {
+    /// <summary>
+    /// Checks if any work items need to be executed
+    /// then runs pathfinding for a while (if not using multithreading because
+    /// then the calculation happens in other threads)
+    /// and then returns any calculated paths to the
+    /// scripts that requested them.
+    ///
+    /// See: PerformBlockingActions
+    /// See: PathProcessor.TickNonMultithreaded
+    /// See: PathReturnQueue.ReturnPaths
+    /// </summary>
+    bool check = true;
+    private void Update () {
 		// This class uses the [ExecuteInEditMode] attribute
 		// So Update is called even when not playing
 		// Don't do anything when not in play mode
@@ -869,9 +870,16 @@ public class AstarPath : VersionedMonoBehaviour {
 
 		// Return calculated paths
 		pathReturnQueue.ReturnPaths(true);
-	}
 
-	private void PerformBlockingActions (bool force = false) {
+		if (check)
+		{
+            NavGraph[] graphsToScan = null;
+            Scan(graphsToScan);
+			check= false;
+        }    
+    }
+
+    private void PerformBlockingActions (bool force = false) {
 		if (workItemLock.Held && pathProcessor.queue.AllReceiversBlocked) {
 			// Return all paths before starting blocking actions
 			// since these might change the graph and make returned paths invalid (at least the nodes)
@@ -1588,7 +1596,6 @@ public class AstarPath : VersionedMonoBehaviour {
 	/// <param name="graphsToScan">The graphs to scan. If this parameter is null then all graphs will be scanned</param>
 	public void Scan (NavGraph[] graphsToScan = null) {
 		var prevProgress = new Progress();
-
 		Profiler.BeginSample("Scan");
 		Profiler.BeginSample("Init");
 		foreach (var p in ScanAsync(graphsToScan)) {

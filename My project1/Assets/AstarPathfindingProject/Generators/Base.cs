@@ -11,7 +11,7 @@ namespace Pathfinding {
 	/// as this library is distributed with source code).
 	///
 	/// Hiding the internal methods cleans up the documentation and IntelliSense suggestions.
-	/// </summary>
+	/// </summary>z
 	public interface IGraphInternals {
 		string SerializedEditorSettings { get; set; }
 		void OnDestroy();
