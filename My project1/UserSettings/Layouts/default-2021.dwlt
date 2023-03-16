@@ -18,11 +18,14 @@ MonoBehaviour:
     y: 43.2
     width: 1536
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 772.8
   m_ShowMode: 4
   m_Title: Inspector
   m_RootView: {fileID: 2}
 =======
+=======
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
     height: 780.8
   m_ShowMode: 4
   m_Title: Scene
@@ -160,7 +163,11 @@ MonoBehaviour:
     y: 0
     width: 1536
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 772.8
+=======
+    height: 780.8
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
     height: 780.8
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
@@ -209,7 +216,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 752.8
+=======
+    y: 760.8
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
     y: 760.8
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
@@ -237,6 +248,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 30
     width: 1536
     height: 722.8
@@ -246,6 +258,8 @@ MonoBehaviour:
   controlID: 9358
 --- !u!114 &6
 =======
+=======
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
     y: 0
     width: 1172.8
     height: 730.8
@@ -274,6 +288,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 375.2
     height: 722.8
   m_MinSize: {x: 100, y: 200}
@@ -282,6 +297,8 @@ MonoBehaviour:
   controlID: 9415
 --- !u!114 &7
 =======
+=======
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
     width: 1172.8
     height: 432.8
   m_MinSize: {x: 200, y: 100}
@@ -300,7 +317,11 @@ MonoBehaviour:
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: 
+=======
+  m_Name: SceneView
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
   m_Name: SceneView
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
@@ -308,6 +329,7 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
     x: 0
     y: 0
@@ -342,6 +364,8 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
 =======
+=======
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
     x: 290.4
     y: 0
     width: 882.4
@@ -631,9 +655,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 392.80002
     width: 374.2
     height: 382.59998
+=======
+    y: 506.4
+    width: 1171.8
+    height: 277
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
     y: 506.4
     width: 1171.8
@@ -657,7 +687,11 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/scrip/UI
+=======
+    - Assets/prefab/Weapon
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
     - Assets/prefab/Weapon
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
@@ -666,6 +700,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
   - Assets/scrip/UI
   m_LastFoldersGridSize: -1
@@ -678,6 +713,8 @@ MonoBehaviour:
     m_LastClickedID: 25514
     m_ExpandedIDs: 0000000060630000626300006463000066630000686300006a6300006c6300006e6300007063000000ca9a3b
 =======
+=======
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
   - Assets/prefab/Weapon
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Asus\Documents\GitHub\PRU_Project1\My project1
@@ -688,6 +725,9 @@ MonoBehaviour:
     m_SelectedIDs: 6c620000
     m_LastClickedID: 25196
     m_ExpandedIDs: 00000000d8610000da610000e8610000ffffff7f
+<<<<<<< HEAD
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
+=======
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -705,7 +745,11 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 8}
+=======
+      m_ClientGUIView: {fileID: 5}
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
       m_ClientGUIView: {fileID: 5}
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
@@ -721,7 +765,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000060630000626300006463000066630000686300006a6300006c6300006e6300007063000000ca9a3b
+=======
+    m_ExpandedIDs: 00000000d8610000da610000
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
     m_ExpandedIDs: 00000000d8610000da610000
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
@@ -904,15 +952,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 375.2
     y: 73.6
     width: 801.2
     height: 459.8
 =======
+=======
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
     x: 290.4
     y: 73.6
     width: 880.4
     height: 411.8
+<<<<<<< HEAD
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
+=======
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1171,9 +1225,15 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 7.487083, y: 21.739197, z: -0.24577203}
     speed: 2
     m_Value: {x: 7.487083, y: 21.739197, z: -0.24577203}
+=======
+    m_Target: {x: 2.5798764, y: -4.4313293, z: -0.25532973}
+    speed: 2
+    m_Value: {x: 2.5030081, y: -4.227512, z: -0.24407907}
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
     m_Target: {x: 2.5798764, y: -4.4313293, z: -0.25532973}
     speed: 2
@@ -1230,9 +1290,15 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 89.69749
     speed: 2
     m_Value: 89.69749
+=======
+    m_Target: 26.126654
+    speed: 2
+    m_Value: 25.001583
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
 =======
     m_Target: 26.126654
     speed: 2
@@ -1378,15 +1444,21 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 375.2
     y: 554.4
     width: 801.2
     height: 221
 =======
+=======
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
     x: 2249
     y: 726.5
     width: 920
     height: 250
+<<<<<<< HEAD
+>>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
+=======
 >>>>>>> cbe12aea4f3b8d0aad40682e35528f72f9771834
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
