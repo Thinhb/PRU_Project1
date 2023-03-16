@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 796002969}
   m_Layer: 5
   m_Name: BtnSpeed
-  m_TagString: Untagged
+  m_TagString: Speed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1894,7 +1894,7 @@ GameObject:
   - component: {fileID: 1425528282}
   m_Layer: 5
   m_Name: BtnBlood
-  m_TagString: Untagged
+  m_TagString: Blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2304,7 +2304,7 @@ GameObject:
   - component: {fileID: 2123417087}
   m_Layer: 5
   m_Name: BtnSword
-  m_TagString: Untagged
+  m_TagString: Sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

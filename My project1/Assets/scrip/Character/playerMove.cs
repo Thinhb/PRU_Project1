@@ -8,7 +8,7 @@ using UnityEngine.Animations;
 
 public class playerMove : MonoBehaviour
 {
-    float speedMove = 10;
+   public float speedMove = 10;
     float xDirection;
     float yDirection;
     [SerializeField] int jumpPower;

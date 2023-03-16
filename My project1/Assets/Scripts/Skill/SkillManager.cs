@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class SkillManager : MonoBehaviour
 {
     public int priceHealth = 50;
+    public int priceSpeed = 100;
+    public int priceSword = 50;
     public Text text;
     public HealthHitCharacter healthHitCharacter;
+    public playerMove playermove;
 
     public void Buyhealth()
     {
@@ -22,9 +25,9 @@ public class SkillManager : MonoBehaviour
     }
     public void BuySeep()
     {
-
+        playermove.speedMove += 1;
     }
-    public void Buy()
+    public void BuySword()
     {
 
     }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - bullet
   - ground
+  - Sword
+  - Blood
+  - Speed
   layers:
   - Default
   - TransparentFX
