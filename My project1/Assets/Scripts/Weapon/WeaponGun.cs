@@ -18,17 +18,17 @@ public class WeaponGun : MonoBehaviour
     {
         autoShoot();
     }
-    void Shoot()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
+    //void Shoot()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Z))
+    //    {
 
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(bulletSpawnPoint.right * bulletSpeed, ForceMode2D.Impulse);
+    //        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+    //        bullet.GetComponent<Rigidbody2D>().AddForce(bulletSpawnPoint.right * bulletSpeed, ForceMode2D.Impulse);
 
-        }
+    //    }
 
-    }
+    //}
     void autoShoot()
     {
         var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
