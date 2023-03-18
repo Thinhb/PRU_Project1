@@ -16,7 +16,7 @@ public class WeaponGun : MonoBehaviour
     }
     void Update()
     {
-        Shoot();
+        autoShoot();
     }
     void Shoot()
     {
@@ -28,5 +28,10 @@ public class WeaponGun : MonoBehaviour
 
         }
 
+    }
+    void autoShoot()
+    {
+        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(bulletSpawnPoint.right * bulletSpeed, ForceMode2D.Impulse);
     }
 }
