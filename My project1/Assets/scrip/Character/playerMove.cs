@@ -8,7 +8,7 @@ using UnityEngine.Animations;
 
 public class playerMove : MonoBehaviour
 {
-    float speedMove = 8;
+    float speedMove = 5;
     float xDirection;
     float yDirection;
     Rigidbody2D rb;

@@ -1,3 +1,4 @@
+using log4net.Util;
 using UnityEngine;
 
 namespace Pathfinding.Util {
@@ -210,6 +211,7 @@ namespace Pathfinding.Util {
 			return rotation * new Vector3(point.x, elevation, point.y);
 		}
 
-		#endregion
-	}
+        #endregion
+       
+    }
 }
