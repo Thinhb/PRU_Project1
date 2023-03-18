@@ -6,6 +6,10 @@ TagManager:
   tags:
   - bullet
   - ground
+  - MapLeft
+  - MapRight
+  - MapTop
+  - MapButtom
   layers:
   - Default
   - TransparentFX
