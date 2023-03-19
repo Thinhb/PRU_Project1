@@ -55,7 +55,7 @@ public class SpawnEnemy : MonoBehaviour
         }
         if (randomPosition == 2)
         {
-            Instantiate(enemy[randomEnemy], spawnPos2, Quaternion.identity);
+            //Instantiate(enemy[randomEnemy], spawnPos2, Quaternion.identity);
         }
         if (randomPosition == 3)
         {
@@ -63,7 +63,7 @@ public class SpawnEnemy : MonoBehaviour
         }
         if (randomPosition == 4)
         {
-          //  Instantiate(enemy[randomEnemy], spawnPos4, Quaternion.identity);
+            //Instantiate(enemy[randomEnemy], spawnPos4, Quaternion.identity);
         }
 
     }
