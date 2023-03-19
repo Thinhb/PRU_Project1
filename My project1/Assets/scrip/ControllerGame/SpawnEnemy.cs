@@ -29,7 +29,7 @@ public class SpawnEnemy : MonoBehaviour
         Vector2 spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y+7+3);
         Vector2 spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y - 7 - 3);
         Vector2 spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3,Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
-        Vector2 spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+      //  Vector2 spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
         int randomPosition = Random.Range(1, 5);
         int randomRateEnemy= Random.Range(1,101);
         int randomEnemy=-1;
@@ -63,7 +63,7 @@ public class SpawnEnemy : MonoBehaviour
         }
         if (randomPosition == 4)
         {
-            Instantiate(enemy[randomEnemy], spawnPos4, Quaternion.identity);
+          //  Instantiate(enemy[randomEnemy], spawnPos4, Quaternion.identity);
         }
 
     }
