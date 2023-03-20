@@ -55,11 +55,11 @@ public class SpawnEnemy : MonoBehaviour
         }
         if (randomPosition == 2)
         {
-            //Instantiate(enemy[randomEnemy], spawnPos2, Quaternion.identity);
+            Instantiate(enemy[randomEnemy], spawnPos2, Quaternion.identity);
         }
         if (randomPosition == 3)
         {
-            Instantiate(enemy[randomEnemy], spawnPos3, Quaternion.identity);
+           // Instantiate(enemy[randomEnemy], spawnPos3, Quaternion.identity);
         }
         if (randomPosition == 4)
         {
