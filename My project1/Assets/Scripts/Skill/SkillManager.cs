@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SkillManager : MonoBehaviour
 {
     public int priceHealth = 50;
-    public int priceSpeed = 100;
+    public int priceSpeed = 10;
     public int priceSword = 50;
     public Text Displaytext;
     public HealthHitCharacter healthHitCharacter;
@@ -21,26 +21,50 @@ public class SkillManager : MonoBehaviour
             healthHitCharacter.hitpoint += 5;
             gameController.m_score -= priceHealth;
             ui.textScore("Coin:" + gameController.m_score);
-            Displaytext.text = "Successfully bought blood!";
-        } else if(healthHitCharacter.hitpoint == healthHitCharacter.Maxhealth)
+           Displaytext.text = "Successfully bought blood!";
+            StartCoroutine(DisplayTextForTime());
+        }
+        else if(healthHitCharacter.hitpoint == healthHitCharacter.Maxhealth)
         {
             healthHitCharacter.hitpoint += 0;
             priceHealth = 0;
             ui.textScore("Coin:" + gameController.m_score);
             Displaytext.text = "Full of bool!";
-        } else if(gameController.m_score < priceHealth)
+            StartCoroutine(DisplayTextForTime());
+        } 
+        else if(gameController.m_score < priceHealth)
         {
             Displaytext.text = "Not enough money!!!";
+            StartCoroutine(DisplayTextForTime());
         }
     }
     public void BuySeep()
     {
-      
+        if (gameController.m_score > priceSpeed)
+        {
+          playermove.speedMove += 10;
+          gameController.m_score -= priceSpeed;
+          ui.textScore("Coin:" + gameController.m_score);
+         Displaytext.text = "Successfully bought speed!";
+            StartCoroutine(DisplayTextForTime());
+        }
+        else if (gameController.m_score < priceSpeed)
+        {
+           Displaytext.text = "Not enough money!!!";
+            StartCoroutine(DisplayTextForTime());
+        }
 
     }
     public void BuySword()
     {
 
+    }
+
+    IEnumerator DisplayTextForTime()
+    {
+        Displaytext.enabled = true;
+        yield return new WaitForSeconds(2);
+        Displaytext.enabled = false;
     }
 
     void Start()

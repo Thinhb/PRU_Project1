@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 30546958}
   - component: {fileID: 30546957}
   - component: {fileID: 30546956}
+  - component: {fileID: 30546959}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -191,6 +192,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &30546959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30546955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e389de7a05d0945984530ebf6af58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceHealth: 50
+  priceSpeed: 10
+  priceSword: 50
+  Displaytext: {fileID: 1284099463}
+  healthHitCharacter: {fileID: 0}
+  playermove: {fileID: 6200979816025427559, guid: 7629cdedde833444c84632d83c051b6f, type: 3}
+  ui: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!1001 &76297867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -502,6 +523,7 @@ GameObject:
   - component: {fileID: 304603937}
   - component: {fileID: 304603936}
   - component: {fileID: 304603935}
+  - component: {fileID: 304603938}
   m_Layer: 5
   m_Name: Sword
   m_TagString: Untagged
@@ -523,12 +545,12 @@ RectTransform:
   m_Children:
   - {fileID: 1425701640}
   m_Father: {fileID: 1338930649}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 153.2, y: 41.8}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 331, y: -166.61}
+  m_SizeDelta: {x: 39.66, y: 17.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304603935
 MonoBehaviour:
@@ -573,7 +595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 304603936}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 304603933}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &304603936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,8 +628,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 308239d4a6d38ba40912c57d9f89aef1, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -612,6 +646,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304603933}
   m_CullTransparentMesh: 1
+--- !u!114 &304603938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304603933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e389de7a05d0945984530ebf6af58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceHealth: 50
+  priceSpeed: 10
+  priceSword: 50
+  Displaytext: {fileID: 1284099463}
+  healthHitCharacter: {fileID: 0}
+  playermove: {fileID: 6200979816025427559, guid: 7629cdedde833444c84632d83c051b6f, type: 3}
+  ui: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!1 &309000120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1774,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1284099461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1284099462}
+  - component: {fileID: 1284099464}
+  - component: {fileID: 1284099463}
+  m_Layer: 5
+  m_Name: DisplayText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1284099462
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284099461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1338930649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.29, y: 156}
+  m_SizeDelta: {x: 366.65, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1284099463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284099461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.735849, g: 0.6084381, b: 0.20409396, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1284099464
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284099461}
+  m_CullTransparentMesh: 1
 --- !u!1 &1338930645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1946,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1284099462}
   - {fileID: 304603934}
   - {fileID: 1627002957}
   - {fileID: 1498671373}
@@ -1955,7 +2090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1425701642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1999,8 +2134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5.4700003, y: 0}
+  m_SizeDelta: {x: -10.94, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1428955921
 MonoBehaviour:
@@ -2035,7 +2170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1428955922
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2189,6 +2324,7 @@ GameObject:
   - component: {fileID: 1498671376}
   - component: {fileID: 1498671375}
   - component: {fileID: 1498671374}
+  - component: {fileID: 1498671377}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -2210,12 +2346,12 @@ RectTransform:
   m_Children:
   - {fileID: 1428955920}
   m_Father: {fileID: 1338930649}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 198, y: -166}
+  m_SizeDelta: {x: 29.94, y: 26.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498671374
 MonoBehaviour:
@@ -2260,7 +2396,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1498671375}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1498671372}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1498671375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2281,8 +2429,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 573af4605cb41b54e9e270c3cf2e8109, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2299,6 +2447,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498671372}
   m_CullTransparentMesh: 1
+--- !u!114 &1498671377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498671372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e389de7a05d0945984530ebf6af58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceHealth: 50
+  priceSpeed: 10
+  priceSword: 50
+  Displaytext: {fileID: 1284099463}
+  healthHitCharacter: {fileID: 0}
+  playermove: {fileID: 6200979816025427559, guid: 7629cdedde833444c84632d83c051b6f, type: 3}
+  ui: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!4 &1531173312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8236820088818397637, guid: 095159c3697e6f241b36840831285b81, type: 3}
@@ -2339,8 +2507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 17.02, y: 0}
+  m_SizeDelta: {x: -34.04, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1554427602
 MonoBehaviour:
@@ -2375,7 +2543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1554427603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2535,6 +2703,7 @@ GameObject:
   - component: {fileID: 1627002960}
   - component: {fileID: 1627002959}
   - component: {fileID: 1627002958}
+  - component: {fileID: 1627002961}
   m_Layer: 5
   m_Name: Speed
   m_TagString: Untagged
@@ -2556,12 +2725,12 @@ RectTransform:
   m_Children:
   - {fileID: 1554427601}
   m_Father: {fileID: 1338930649}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 261, y: -166}
+  m_SizeDelta: {x: 29.94, y: 19.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627002958
 MonoBehaviour:
@@ -2606,7 +2775,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1627002959}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1627002956}
+        m_TargetAssemblyTypeName: SkillManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1627002959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2627,8 +2808,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 995b5ccf8a4ccb94994971c910edbadf, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2645,6 +2826,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627002956}
   m_CullTransparentMesh: 1
+--- !u!114 &1627002961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627002956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e389de7a05d0945984530ebf6af58c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceHealth: 50
+  priceSpeed: 100
+  priceSword: 50
+  Displaytext: {fileID: 1284099463}
+  healthHitCharacter: {fileID: 0}
+  playermove: {fileID: 6200979816025427559, guid: 7629cdedde833444c84632d83c051b6f, type: 3}
+  ui: {fileID: 0}
+  gameController: {fileID: 0}
 --- !u!1 &1639931344
 GameObject:
   m_ObjectHideFlags: 0
