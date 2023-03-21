@@ -6,24 +6,24 @@ public class WeaponGun : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
-
+    public float timerdelay=0.5f;
     private float timer;
     private GameObject enemy;
 
     void Start()
     {
-        enemy = GameObject.FindGameObjectWithTag("enemy");
+       
     }
     void Update()
     {
+        enemy = GameObject.FindGameObjectWithTag("enemy");
         timer += Time.deltaTime;
 
         float distance = Vector2.Distance(transform.position, enemy.transform.position);
-        Debug.Log(distance);
-        if(distance < 20)
+        if(distance < 30)
         {
             timer += Time.deltaTime;
-            if (timer > 2)
+            if (timer > timerdelay)
             {
                 timer = 0;
                 shoot();
