@@ -291,6 +291,6 @@ MonoBehaviour:
   enemy:
   - {fileID: 232683543373439097, guid: c489a077bc5edac4983121a630b23570, type: 3}
   - {fileID: 4391112197985229212, guid: 1968aa849297d444e86aa19198493d46, type: 3}
-  - {fileID: 190502817323597276, guid: 0f0e06f86a3e0fe49a180c48fb30510d, type: 3}
+  - {fileID: 375443452110701618, guid: 0f0e06f86a3e0fe49a180c48fb30510d, type: 3}
   cameraTranform: {fileID: 0}
   m_spawnTime: 2
