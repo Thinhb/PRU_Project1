@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     public float spawnTime;
     [SerializeField] float m_spawnTime;
-    int m_score;
+    public int m_score;
     bool m_isOver;
     UI m_UI;
     float power;

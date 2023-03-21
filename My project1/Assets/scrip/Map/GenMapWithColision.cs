@@ -9,15 +9,10 @@ public class GenMapWithColision : MonoBehaviour
     public GameObject map;
     bool check = true;
     public float location;
-    GenMapCheck mapcheck;
-    MapInfinity mapinfinity;
     void Start()
     {
-        mapcheck= FindObjectOfType<GenMapCheck>();
-        mapinfinity= FindObjectOfType<MapInfinity>();
-    }
 
-    // Update is called once per frame
+    }
     void Update()
     {
     }
@@ -25,17 +20,23 @@ public class GenMapWithColision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject RightMap = GameObject.FindGameObjectWithTag("MapRight");            
-            if (check)
-            {
-                
-                GameObject LeftMap = GameObject.FindGameObjectWithTag("MapLeft");
-                LeftMap.GetComponent<GenMapCheck>().checkGen = false;
+            GameObject RightMap = GameObject.FindGameObjectWithTag("MapRight");
+            GameObject LeftMap = GameObject.FindGameObjectWithTag("MapLeft");
+            Debug.Log(RightMap.GetComponent<GenMapCheck>().direction);
+            RightMap.GetComponent<GenMapCheck>().checkGen = false;
+            Debug.Log(RightMap.GetComponent<GenMapCheck>().checkGen);
+            Debug.Log(LeftMap.GetComponent<GenMapCheck>().direction);
+            Debug.Log(LeftMap.GetComponent<GenMapCheck>().checkGen);
+            /*if (check)
+            {                
+                GameObject LeftMap1 = GameObject.FindGameObjectWithTag("MapLeft");
+                LeftMap1.GetComponent<GenMapCheck>().checkGen = false;
                 var newmap= Instantiate(map, map.transform.position + new Vector3(location, 0, 0), Quaternion.identity);
                 Debug.Log("spawnMap");
                 check = false;
-                LeftMap.GetComponent<GenMapCheck>().checkGen = true;                
-            }
+                LeftMap1.GetComponent<GenMapCheck>().checkGen = true;
+                
+            }*/
         }
     }
 }

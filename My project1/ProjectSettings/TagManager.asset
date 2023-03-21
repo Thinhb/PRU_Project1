@@ -10,6 +10,8 @@ TagManager:
   - MapRight
   - MapTop
   - MapButtom
+  - PlayerHealth
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -18,8 +20,8 @@ TagManager:
   - Water
   - UI
   - Background
-  - 
-  - 
+  - player
+  - enemy
   - 
   - 
   - 
