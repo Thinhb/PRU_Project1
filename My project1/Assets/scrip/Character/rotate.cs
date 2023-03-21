@@ -6,6 +6,8 @@ public class rotate : MonoBehaviour
 {
     bool check = true;
     float xDirection;
+    Vector2 moveInput;
+    public FixedJoystick joystick;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +17,12 @@ public class rotate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        xDirection = Input.GetAxisRaw("Horizontal");
-        if (xDirection>0 && !check)
+        moveInput.x = joystick.Horizontal;
+        if (moveInput.x > 0 && !check)
         {
             flip();
         }
-        if (xDirection< 0 && check)
+        if (moveInput.x <0 && check)
         {
             flip();
         }

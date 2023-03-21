@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class WeaponGun : MonoBehaviour
 {
-    public Transform bulletSpawnPoint;
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 15;
+    public GameObject bullet;
+    public Transform bulletPos;
+    public float timerdelay = 0.5f;
+    private float timer;
+    private GameObject enemy;
 
-
-    private void Start()
+    void Start()
     {
-
-
+        enemy = GameObject.FindGameObjectWithTag("enemy");
     }
     void Update()
     {
-        Shoot();
-    }
-    void Shoot()
-    {
-        if (Input.GetKeyDown(KeyCode.Z))
+        timer += Time.deltaTime;
+
+        float distance = Vector2.Distance(transform.position, enemy.transform.position);
+        Debug.Log(distance);
+        if(distance < 20)
         {
-
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-            bullet.GetComponent<Rigidbody2D>().AddForce(bulletSpawnPoint.right * bulletSpeed, ForceMode2D.Impulse);
-
+            timer += Time.deltaTime;
+            if (timer > 2)
+            {
+                timer = 0;
+                shoot();
+            }
         }
-
+        
+    }
+    void shoot()
+    {
+        Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }
 }

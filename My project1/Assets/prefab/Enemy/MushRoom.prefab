@@ -15,11 +15,12 @@ GameObject:
   - component: {fileID: 190502817323597284}
   - component: {fileID: 190502817323597285}
   - component: {fileID: 190502817323597274}
-  - component: {fileID: 190502817323597275}
   - component: {fileID: 190502817323597272}
-  m_Layer: 0
+  - component: {fileID: 3886184504821736}
+  - component: {fileID: -6874761758616151861}
+  m_Layer: 8
   m_Name: MushRoom
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +212,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.25, y: 0.36}
   m_Direction: 0
---- !u!50 &190502817323597275
+--- !u!114 &190502817323597272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190502817323597276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 773766ef40b343444b03bb9b258f218e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aiPath: {fileID: 190502817323597285}
+  scale: 4.5
+--- !u!50 &3886184504821736
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -232,7 +247,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &190502817323597272
+--- !u!114 &-6874761758616151861
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,8 +256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 190502817323597276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 773766ef40b343444b03bb9b258f218e, type: 3}
+  m_Script: {fileID: 11500000, guid: 14802670cf0ce8944b854fbb307b8bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aiPath: {fileID: 190502817323597285}
-  scale: 4.5
+  enemyName: mushroom

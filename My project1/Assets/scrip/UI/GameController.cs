@@ -11,14 +11,16 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     public float spawnTime;
     [SerializeField] float m_spawnTime;
-    public int m_score ;
+    public int m_score;
     bool m_isOver;
     UI m_UI;
     float power;
     void Start()
+
     {
+        m_score = 99;
         m_UI = FindObjectOfType<UI>();
-        m_UI.textScore("Coin:" + m_score);
+        m_UI.textScore("Coin:" + m_score );
     }
 
     // Update is called once per frame

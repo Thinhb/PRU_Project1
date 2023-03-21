@@ -26,11 +26,79 @@ public class SpawnEnemy : MonoBehaviour
     }
     public void spawnBall()
     {
+        int randomPosition;
         Vector2 spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y+7+3);
         Vector2 spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y - 7 - 3);
         Vector2 spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3,Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
-      //  Vector2 spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
-        int randomPosition = Random.Range(1, 5);
+        Vector2 spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+        if (cameraTranform.transform.position.x >= 170)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x-2), cameraTranform.position.y + 7 + 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x-2), cameraTranform.position.y - 7 - 3);
+            spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+            spawnPos4 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+            //spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+            Debug.Log("1");
+
+        }
+        if (cameraTranform.transform.position.x <= -150)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x, cameraTranform.position.x + 13), cameraTranform.position.y + 7 + 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x, cameraTranform.position.x + 13), cameraTranform.position.y - 7 - 3);
+            //spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+            spawnPos3 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+            spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y + 7));
+            Debug.Log("2");
+        }
+        if (cameraTranform.transform.position.y >= 115)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y - 7 - 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y - 7 - 3);
+            spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y));
+            spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y));
+            Debug.Log("3");
+        }
+        if (cameraTranform.transform.position.y <= -41)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y + 7 + 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x + 13), cameraTranform.position.y + 7 + 3);
+            spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y + 7));
+            spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y + 7));
+            Debug.Log("4");
+        }
+        if (cameraTranform.transform.position.x <= -150 && cameraTranform.transform.position.y >= 115)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x, cameraTranform.position.x + 13), cameraTranform.position.y - 7 - 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x, cameraTranform.position.x + 13), cameraTranform.position.y - 7 - 3);
+            spawnPos3 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y));
+            spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y));
+            Debug.Log("5");
+        }
+        if (cameraTranform.transform.position.x >= 170 && cameraTranform.transform.position.y >= 115)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x), cameraTranform.position.y - 7 - 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x), cameraTranform.position.y - 7 - 3);
+            spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y));
+            spawnPos4 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y - 7, cameraTranform.position.y));
+            Debug.Log("6");
+        }
+        if (cameraTranform.transform.position.x <= -150 && cameraTranform.transform.position.y <= -41)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x, cameraTranform.position.x + 13), cameraTranform.position.y + 7 + 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x, cameraTranform.position.x + 13), cameraTranform.position.y + 7 + 3);
+            spawnPos3 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y + 7));
+            spawnPos4 = new Vector2(cameraTranform.position.x + 13 + 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y + 7));
+            Debug.Log("7");
+        }
+        if (cameraTranform.transform.position.x >= 170 && cameraTranform.transform.position.y <= -41)//
+        {
+            spawnPos1 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x), cameraTranform.position.y + 7 + 3);
+            spawnPos2 = new Vector2(Random.Range(cameraTranform.position.x - 13, cameraTranform.position.x), cameraTranform.position.y + 7 + 3);
+            spawnPos3 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y + 7));
+            spawnPos4 = new Vector2(cameraTranform.position.x - 13 - 3, Random.Range(cameraTranform.position.y, cameraTranform.position.y + 7));
+            Debug.Log("8");
+        }
+        randomPosition = Random.Range(1, 5);
         int randomRateEnemy= Random.Range(1,101);
         int randomEnemy=-1;
 
@@ -51,19 +119,19 @@ public class SpawnEnemy : MonoBehaviour
         }
         if (randomPosition == 1)
         {
-            Instantiate(enemy[randomEnemy], spawnPos1, Quaternion.identity);
+           // Instantiate(enemy[randomEnemy], spawnPos1, Quaternion.identity);
         }
         if (randomPosition == 2)
         {
-            Instantiate(enemy[randomEnemy], spawnPos2, Quaternion.identity);
+           // Instantiate(enemy[randomEnemy], spawnPos2, Quaternion.identity);
         }
         if (randomPosition == 3)
         {
-           // Instantiate(enemy[randomEnemy], spawnPos3, Quaternion.identity);
+          //  Instantiate(enemy[randomEnemy], spawnPos3, Quaternion.identity);
         }
         if (randomPosition == 4)
         {
-            //Instantiate(enemy[randomEnemy], spawnPos4, Quaternion.identity);
+           // Instantiate(enemy[randomEnemy], spawnPos4, Quaternion.identity);
         }
 
     }
